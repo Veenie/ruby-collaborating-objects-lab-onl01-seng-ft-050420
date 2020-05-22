@@ -24,7 +24,11 @@ class Artist
     
   end
 
-
+  def save
+    if !@@all.include?(self)
+        @@all << self
+    end
+  end
 
   def self.all
     @@all #displays the all array
